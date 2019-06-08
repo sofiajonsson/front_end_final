@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from "react";
+import SnowReportList from './containers/SnowReportList'
+
 import './App.css';
 
-function App() {
+
+const API = "http://localhost:3000/snow_reports"
+class App extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      snowReports: []
+    }
+
+    fetch(API)
+    .then(res => res.json())
+    .then(snowReports => this.setState({ snowReports }), () => console.log(this.state.snowReports))
+    console.log('hit ')
+  }
+render() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    Snow Reports Recieved: {this.state.snowReports.length}
+    <SnowReportList
+      snowReports={this.state.snowReports}
+      />
+      {/*<WeeklyForecasts />
+      <Resorts />
+      <Users />
+      <Reviews />*/}
     </div>
-  );
+    );
+  }
 }
 
 export default App;
