@@ -2,10 +2,7 @@ import React, { Component } from "react";
 
 import Header from './containers/Header'
 import Main from './containers/Main'
-
-import SnowReportList from './containers/SnowReportList'
-import ResortList from './containers/ResortList'
-import ForecastList from './containers/ForecastList'
+import { withRouter } from 'react-router-dom'
 
 import './App.css';
 
@@ -20,4 +17,4 @@ class App extends Component {
     }
   }
 
-export default App;
+export default withRouter(App);

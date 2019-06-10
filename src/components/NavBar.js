@@ -14,7 +14,7 @@ const NavBar = () => {
         style={{ marginRight: '10px' }}
         to="/resorts"
       >
-        Movies
+        Resorts
       </NavLink>
     </div>
   );

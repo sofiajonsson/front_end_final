@@ -5,12 +5,14 @@ class SnowReportList extends Component{
 	constructor(props) {
 		super(props)
 		this.state={}
+		console.log("Snow Report", props)
 	}
+
 	render(){
 		return(
 			<div>
 				<h1>Snow Report List</h1>
-				List out the Snow Reports
+				<SnowReport />
 			</div>
 		)
 	}

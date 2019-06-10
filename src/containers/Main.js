@@ -25,8 +25,12 @@ class Main extends Component {
 
     fetch(snow_API)
     .then(res => res.json())
-    .then(snowReports => this.setState({ snowReports }), () => console.log(this.state.snowReports))
+    .then(snowReports => this.setState({ snowReports }))
+    .then(console.log(this.state.snowReports))
+    // .then(() => this.state.snowReports = props.match )
+
     console.log('hit snow api ')
+    console.log("Snow Report Fetch", this.state.snowReports)
 
     fetch(forecast_API)
     .then(res => res.json())
@@ -47,11 +51,15 @@ class Main extends Component {
       <br/>
       Resorts Recieved: {this.state.resorts.length}
       <br/>
+
         <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route path='/resorts' component={ResortList}/>
-          <Route path='/forecasts' component={ForecastList}/>
-          <Route path='/snowreports' component={SnowReportList}/>
+          <Route exact path='/' render={Home}/>
+          <Route path='/resorts' render={() => <ResortList resorts={this.state.resorts} isAuthed={true} />}
+          />
+          <Route path='/forecasts' render={() => <ForecastList forecast={this.state.forecastReports} isAuthed={true} />}
+          />
+          <Route path='/snowreports' render={() => <SnowReportList snowReport={this.state.snowReports} isAuthed={true} />}
+          />
         </Switch>
       </main>
     )
