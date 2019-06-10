@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-const SnowReport = props => {
+const Resort = props => {
 	console.log(props);
 	return(
 		<div> </div>
 	)
 }
 
-export default SnowReport
+export default Resort
