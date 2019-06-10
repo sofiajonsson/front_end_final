@@ -10,7 +10,7 @@ class SnowReportList extends Component{
 		return(
 			<div>
 				<h1>Snow Report List</h1>
-
+				List out the Snow Reports
 			</div>
 		)
 	}

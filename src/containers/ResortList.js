@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Switch, Route } from 'react-router-dom'
 // import SnowReport from "../components/SnowReport"
 
 class ResortList extends Component{
@@ -10,7 +11,7 @@ class ResortList extends Component{
 		return(
 			<div>
 				<h1>Resorts List</h1>
-
+				List out all the resorts
 			</div>
 		)
 	}
