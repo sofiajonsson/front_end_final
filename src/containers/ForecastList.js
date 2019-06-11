@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import SnowReport from "../components/SnowReport"
+import Forecast from '../components/Forecast'
 
 class ForecastList extends Component{
 	constructor(props) {
@@ -10,10 +10,9 @@ class ForecastList extends Component{
 		return(
 			<div>
 				<h1>Forecast List</h1>
-				<h1>Forecast List {'authed? ' + this.props.isAuthed} {this.props.forecastReports}</h1>
-				<ul>
-				Listing forecasts
-				</ul>
+					{this.props.forecast.map(forecast => {
+						return <Forecast id={forecast.id} forecast={forecast} />
+					})}
 			</div>
 		)
 	}

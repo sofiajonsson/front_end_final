@@ -7,25 +7,93 @@ class Forecast extends Component {
 		}
 	render(){
 		return(
-			<div>Hit Forecast Page
-			<div className="card-body">
-				<h3 className="card-title">{this.props.forecast.title}</h3>
+			<div>
+				<div className="card-body">
+					<h3 className="card-title">{this.props.forecast.title}</h3>
+					<table className="forecast-table">
+						<tbody>
+						<tr>
+							<th>
+							</th>
+							<th>
+							Today:
+							</th>
+							<th>
+							Tomorrow:
+							</th>
+							<th>
+							Day 3:
+							</th>
+							<th>
+							Day 4:
+							</th>
+							<th>
+							Day 5:
+							</th>
+							<th>
+							Day 6:
+							</th>
+							<th>
+							Day 7:
+							</th>
+							</tr>
+						<tr>
+							<td>
+							At Base:
+							</td>
+							<td>
+							{this.props.forecast.today_at_base}
+							</td>
+							<td>
+							 {this.props.forecast.tomorrow_at_base}
+							</td>
+							<td>
+							{this.props.forecast.day3_at_base}
+							</td>
+							<td>
+						 {this.props.forecast.day4_at_base}
+							</td>
+							<td>
+							{this.props.forecast.day5_at_base}
+							</td>
+							<td>
+							 {this.props.forecast.day6_at_base}
+							</td>
+							<td>
+							 {this.props.forecast.day7_at_base}
+							</td>
+						</tr>
 
-				<h5> Today at Base: {this.props.forecast.today_at_base}</h5>
-				<h5> Today on Mountain: {this.props.forecast.today_on_mountain}</h5>
-				<h4> Tomorrow at Base: {this.props.forecast.tomorrow_at_base}</h4>
-				<h5> Tomorrow on Mountain: {this.props.forecast.tomorrow_on_mountain}</h5>
-				<h5> Day 3 at Base:{this.props.forecast.day3_at_base}</h5>
-				<h5> Day 3 on Mountain:{this.props.forecast.day3_at_base}</h5>
-				<h5> Day 4 at Base:{this.props.forecast.day4_at_base}</h5>
-				<h5> Day 4 on Mountain: {this.props.forecast.day4_on_mountain}</h5>
-				<h5> Day 5 at Base: {this.props.forecast.day5_at_base}}</h5>
-				<h5> Day 5 on Mountain: {this.props.forecast.day5_on_mountain}</h5>
-				<h5> Day 6 on Mountain: {this.props.forecast.day6_on_mountain}</h5>
-				<h5> Day 6 on Mountain: {this.props.forecast.day6_on_mountain}</h5>
-				<h5> Day 7 on Mountain: {this.props.forecast.day7_on_mountain}</h5>
-				<h5> Day 7 on Mountain: {this.props.forecast.day7_on_mountain}</h5>
-			</div>
+
+						<tr>
+							<td>
+							On Mountain:
+							</td>
+							<td>
+							 {this.props.forecast.today_on_mountain}
+							</td>
+							<td>
+							{this.props.forecast.tomorrow_on_mountain}
+							</td>
+							<td>
+							{this.props.forecast.day3_at_base}
+							</td>
+							<td>
+							{this.props.forecast.day4_on_mountain}
+							</td>
+							<td>
+							 {this.props.forecast.day5_on_mountain}
+							</td>
+							<td>
+							{this.props.forecast.day6_on_mountain}
+							</td>
+							<td>
+							{this.props.forecast.day7_on_mountain}
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		)
 	}

@@ -45,9 +45,17 @@ body {
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
-  width: 15rem;
-  
+
+
   display: inline-grid;
   margin: 1rem 2rem;
   box-shadow: 3px 4px lightblue
+}
+.forecast-table {
+  border: grey solid 1px;
+  border-spacing: 0.5rem;
+   border-collapse: collapse;
+}
+td, th {
+  padding: 0.5rem;
 }
