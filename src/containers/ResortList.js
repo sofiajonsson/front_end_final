@@ -9,13 +9,17 @@ class ResortList extends Component{
 		this.state={}
 		console.log("resort list", props)
 	}
-
+	// Steve's way of checking if it's working
+// <h1>Resorts List {'authed? ' + this.props.isAuthed} {this.props.resorts.length}</h1>
 	render(){
 		return(
 			<div>
-				<h1>Resorts List {'authed? ' + this.props.isAuthed} {this.props.resorts.length}</h1>
+				<h1>Resorts List </h1>
 				List out all the resorts
-				<Resort resort={this.props.resorts}/>
+
+			 <Resort key={resort.id} resort={this.props.resorts}/>
+
+
 			</div>
 		)
 	}

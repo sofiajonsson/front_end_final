@@ -7,8 +7,11 @@ class Resort extends Component{
 		}
 	render() {
 		return(
-			<div> Hit Resort Page
-
+			<div>
+			<h1>Hit Resort Page</h1>
+				<div className="card-body">
+					<h5 className="card-title">{this.props.resort.title}</h5>
+				</div>
 			</div>
 		)
 	}

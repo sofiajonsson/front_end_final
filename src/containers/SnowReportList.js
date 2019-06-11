@@ -11,7 +11,7 @@ class SnowReportList extends Component{
 	render(){
 		return(
 			<div>
-				<h1>Snow Report List</h1>
+				<h1>Snow Reports List</h1>
 				<SnowReport />
 			</div>
 		)

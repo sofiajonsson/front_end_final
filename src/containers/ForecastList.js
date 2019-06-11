@@ -10,6 +10,7 @@ class ForecastList extends Component{
 		return(
 			<div>
 				<h1>Forecast List</h1>
+				<h1>Forecast List {'authed? ' + this.props.isAuthed} {this.props.forecastReports}</h1>
 				<ul>
 				Listing forecasts
 				</ul>
