@@ -22,6 +22,13 @@
 .App-link {
   color: #61dafb;
 }
+
+body {
+  margin: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  border: grey solid 1px;
+}
+
 .img-responsive {
   width: 90em;
   height: 40em;
@@ -33,4 +40,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+.card-body {
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 15rem;
+  
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px lightblue
 }

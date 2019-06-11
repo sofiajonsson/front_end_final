@@ -16,10 +16,11 @@ class ResortList extends Component{
 			<div>
 				<h1>Resorts List </h1>
 				List out all the resorts
-
-			 <Resort key={resort.id} resort={this.props.resorts}/>
-
-
+					<h1>Resorts List {'authed? ' + this.props.isAuthed} {this.props.resorts.length}</h1>
+						{this.props.resorts.map(resort => {
+							return <Resort key={resort.id} resort={resort} />
+						})
+					}
 			</div>
 		)
 	}

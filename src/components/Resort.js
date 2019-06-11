@@ -8,9 +8,17 @@ class Resort extends Component{
 	render() {
 		return(
 			<div>
-			<h1>Hit Resort Page</h1>
 				<div className="card-body">
-					<h5 className="card-title">{this.props.resort.title}</h5>
+					<h3 className="card-title">{this.props.resort.title}</h3>
+					<img src={this.props.resort.img} alt="ski-resort-img"/>
+					<h5> Elevation: {this.props.resort.elevation_gain}</h5>
+					<h5>Skiiable Terrain: {this.props.resort.skiiable_terrain}}</h5>
+					<h4>Types of Runs:</h4>
+					<h5>Beginner: {this.props.resort.beginner}}</h5>
+					<h5>Intermediate:{this.props.resort.intermediate}}</h5>
+					<h5>Expert: {this.props.resort.expert}}</h5>
+					<h5>Total Lifts: {this.props.resort.total_lifts}}</h5>
+					<h5>Ticket Price: {this.props.resort.ticket_price}}</h5>
 				</div>
 			</div>
 		)

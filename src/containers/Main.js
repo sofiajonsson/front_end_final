@@ -53,7 +53,7 @@ class Main extends Component {
       <br/>
 
         <Switch>
-          <Route exact path='/' render={Home}/>
+          <Route exact path='/' render={()=>  <Home/>}/>
           <Route path='/resorts' render={() => <ResortList resorts={this.state.resorts} isAuthed={true} />}
           />
           <Route path='/forecasts' render={() => <ForecastList forecast={this.state.forecastReports} isAuthed={true} />}
