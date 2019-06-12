@@ -17,7 +17,8 @@ class SnowReportList extends Component{
 		return(
 			<div>
 			<SnowReportSearchBar
-				sortAlphabetically={this.props.sortAlphabetically}
+				sortAlphabetically={this.props.sortAscAlphabetically}
+				sortByOpen={this.props.sortByOpen}
 			/>
 				<h1>Snow Reports List</h1>
 					{this.props.snowReport.map(snowReport => {

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Header = () => (
   <header>
     <nav>
-      <ul>
+      <ul id="header">
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/resorts'>Resorts</Link></li>
         <li><Link to='/forecasts'>Forecasts</Link></li>

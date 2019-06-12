@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(12px + 2vmin);
   color: white;
 }
 
@@ -27,6 +27,7 @@ body {
   margin: 0;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   border: grey solid 1px;
+  font-size: 16px
 }
 
 .img-responsive {
@@ -41,10 +42,14 @@ body {
     transform: rotate(360deg);
   }
 }
+#header li{
+  list-style-type: none;
+}
 .card-body {
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
+  font-size: 16px;
 
 
   display: inline-grid;
@@ -58,4 +63,5 @@ body {
 }
 td, th {
   padding: 0.5rem;
+  font-size: 16px
 }

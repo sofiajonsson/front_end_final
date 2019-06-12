@@ -18,7 +18,7 @@ class ResortList extends Component{
 		return(
 			<div>
 			<ResortSearchBar
-				sortAlphabetically={this.props.sortAlphabetically}
+				sortAlphabetically={this.props.sortAscAlphabetically}
 				sortByPrice={this.props.sortByPrice}
 			/>
 				<h1>Resorts List </h1>

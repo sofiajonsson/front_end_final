@@ -10,7 +10,7 @@ class ForecastList extends Component{
 		return(
 			<div>
 			<ForecastSearchBar
-				sortAlphabetically={this.props.sortAlphabetically}
+				sortAlphabetically={this.props.sortAscAlphabetically}
 			/>
 				<h1>Forecast List</h1>
 					{this.props.forecast.map(forecast => {

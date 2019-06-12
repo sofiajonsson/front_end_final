@@ -11,6 +11,11 @@ const SnowReportSearchBar = (props) => {
         Alphabetically
           <br/>
       </label>
+      <label>
+        <input type="radio" value="Status" checked={null} name="sortBy" onChange={props.sortByOpen}/>
+        Status
+          <br/>
+      </label>
     </div>
   );
 }
