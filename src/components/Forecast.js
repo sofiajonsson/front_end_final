@@ -36,7 +36,32 @@ class Forecast extends Component {
 							<th>
 							Day 7:
 							</th>
-							</tr>
+						</tr>
+						<tr>
+						<th>
+						</th>
+							<th>
+							<img src={`https://www.skiresort.info/${this.props.forecast.today_icon}`} alt="ski-resort-img"/>
+							</th>
+							<th>
+							<img src={`https://www.skiresort.info/${this.props.forecast.tomorrow_icon}`} alt="ski-resort-img"/>
+							</th>
+							<th>
+							<img src={`https://www.skiresort.info/${this.props.forecast.day3_icon}`} alt="ski-resort-img"/>
+							</th>
+							<th>
+							<img src={`https://www.skiresort.info/${this.props.forecast.day4_icon}`} alt="ski-resort-img"/>
+							</th>
+							<th>
+							<img src={`https://www.skiresort.info/${this.props.forecast.day5_icon}`} alt="ski-resort-img"/>
+							</th>
+							<th>
+							<img src={`https://www.skiresort.info/${this.props.forecast.day6_icon}`} alt="ski-resort-img"/>
+							</th>
+							<th>
+							<img src={`https://www.skiresort.info/${this.props.forecast.day7_icon}`} alt="ski-resort-img"/>
+							</th>
+						</tr>
 						<tr>
 							<td>
 							At Base:
