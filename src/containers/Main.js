@@ -4,11 +4,7 @@ import Home from './Home'
 import ResortList from './ResortList'
 import ForecastList from './ForecastList'
 import SnowReportList from './SnowReportList'
-// The Main component renders one of the three provided
-// Routes (provided that one matches). Both the /roster
-// and /schedule routes will match any pathname that starts
-// with /roster or /schedule. The / route will only match
-// when the pathname is exactly the string "/"
+
 
 const snow_API = "http://localhost:3000/snow_reports"
 const forecast_API = "http://localhost:3000/weekly_forecasts"
@@ -42,6 +38,46 @@ class Main extends Component {
     .then(resorts => this.setState({ resorts }), () => console.log(this.state.resorts))
     console.log('hit resort api ')
   }
+
+
+		 sortByPrice =()=> {
+			const resortPrice = this.state.resorts.sort(this.priceSortMethod)
+
+				this.setState({
+					resorts: resortPrice
+				})
+			}
+
+			priceSortMethod= (s1, s2) => {
+				if(s1.ticket_price < s2.ticket_price){
+					return 1;
+				}
+				if (s1.ticket_price > s2.ticket_price){
+					return -1;
+				}
+
+				return 0
+			}
+			sortAlphabetically=() => {
+	 			const rezSorted = this.state.resorts.sort(this.sortMethod)
+	 			const forecastSorted = this.state.forecastReports.sort(this.sortMethod)
+	 			const snowRepSorted = this.state.snowReports.sort(this.sortMethod)
+		 			this.setState({
+			 			resorts: rezSorted,
+			 			forecastReports: forecastSorted,
+			 			snowReports: snowRepSorted
+				 })
+			 }
+			 sortMethod =(s1, s2) =>{
+					if(s1.title < s2.title){
+						return -1;
+					}
+					if (s1.title > s2.title){
+						return 1;
+					}
+					return 0
+				}
+
   render () {
     return (
       <main>
@@ -52,15 +88,15 @@ class Main extends Component {
       Resorts Recieved: {this.state.resorts.length}
       <br/>
 
-        <Switch>
+      <Switch>
           <Route exact path='/' render={()=>  <Home/>}/>
-          <Route path='/resorts' render={() => <ResortList resorts={this.state.resorts} isAuthed={true} />}
+          <Route path='/resorts' render={() => <ResortList resorts={this.state.resorts} sortAlphabetically={this.sortAlphabetically} sortByPrice={this.sortByPrice} isAuthed={true} />}
           />
-          <Route path='/forecasts' render={() => <ForecastList forecast={this.state.forecastReports} isAuthed={true} />}
+          <Route path='/forecasts' render={() => <ForecastList forecast={this.state.forecastReports} sortAlphabetically={this.sortAlphabetically} isAuthed={true} />}
           />
-          <Route path='/snowreports' render={() => <SnowReportList snowReport={this.state.snowReports} isAuthed={true} />}
+          <Route path='/snowreports' render={() => <SnowReportList snowReport={this.state.snowReports} sortAlphabetically={this.sortAlphabetically} isAuthed={true} />}
           />
-        </Switch>
+      </Switch>
       </main>
     )
   }
