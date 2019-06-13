@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => (
   <footer>
     <nav>
-		
+
         <Link to='/'>ABOUT US___</Link>
 
         <Link to='/resorts'>___SUPPORT___</Link>
@@ -12,7 +12,6 @@ const Footer = () => (
         <Link to='/forecasts'>___RESOURCES___</Link>
 
         <Link to='/snowreports'>___ACCOUNT</Link>
-
 
     </nav>
   </footer>

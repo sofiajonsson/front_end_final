@@ -4,6 +4,7 @@ import Home from './Home'
 import ResortList from './ResortList'
 import ForecastList from './ForecastList'
 import SnowReportList from './SnowReportList'
+import Login from '../components/Login'
 
 
 const snow_API = "http://localhost:3000/snow_reports"
@@ -108,6 +109,10 @@ class Main extends Component {
       Resorts Recieved: {this.state.resorts.length}
       <br/>
 
+      <div id="container">
+      </div>
+
+
       <Switch>
           <Route exact path='/' render={()=>  <Home/>}/>
           <Route path='/resorts' render={() => <ResortList resorts={this.state.resorts} sortAscAlphabetically={this.sortAscAlphabetically} sortByPrice={this.sortByPrice} isAuthed={true} />}
@@ -116,7 +121,10 @@ class Main extends Component {
           />
           <Route path='/snowreports' render={() => <SnowReportList snowReport={this.state.snowReports} sortAscAlphabetically={this.sortAscAlphabetically} sortByOpen={this.sortByOpen} isAuthed={true} />}
           />
+          <Route path='/login' render={() => <Login  isAuthed={true} />}
+          />
       </Switch>
+    
       </main>
     )
   }
