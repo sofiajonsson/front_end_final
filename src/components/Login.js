@@ -15,17 +15,18 @@ class Login extends React.Component {
 				// debugger
         // Initializes OAuth.io with API key
         // Sign-up an account to get one
-        window.OAuth.initialize('UtCGL-eyNOOW6oqSH1d7Upsy');
+        window.OAuth.initialize('qivXd2mGo8MTqw9_Pc7Qse_QtM8');
         // Popup Github and ask for authorization
         window.OAuth.popup('google').then((provider) => {
           // Prompts 'welcome' message with User's name on successful login
           // Check console logs for additional User info
           provider.me().then((data) => {
+
             // console.log("data: ", data);
             localStorage.setItem("Final_Project_Token", provider.id_token)
             localStorage.setItem("Final_Project_Email", data.email)
             localStorage.setItem("Final_Project_Username", data.raw.names[0].displayName)
-						debugger
+            debugger
             this.props.setStateUsernameEmailToken(data)
             this.props.history.push('/')
           this.sendAuth()
@@ -52,51 +53,51 @@ class Login extends React.Component {
 
       render() {
         return (
-
-            <div class="ui placeholder segment">
-            <div class="ui stackable very relaxed two column grid">
-              <div class="column">
-                <form class="ui form">
-                  <div class="field">
-                    <label>Username</label>
-                    <div class="ui left icon input">
-                      <input type="text" placeholder="Username" /><i
-                        aria-hidden="true"
-                        class="user icon"
-                      ></i>
+          <div className="outer">
+          <br/><br/><br/><br/><br/>
+            <div className="ui placeholder segment">
+              <div className="ui stackable very relaxed two column grid">
+                <div className="column">
+                  <form className="ui form">
+                    <div className="field">
+                      <label>Username</label>
+                      <div className="ui left icon input">
+                        <input type="text" placeholder="Username" /><i
+                          aria-hidden="true"
+                          className="user icon"
+                        ></i>
+                      </div>
                     </div>
-                  </div>
-                  <div class="field">
-                    <label>Password</label>
-                    <div class="ui left icon input">
-                      <input type="password" /><i
-                        aria-hidden="true"
-                        class="lock icon"
-                      ></i>
+                    <div className="field">
+                      <label>Password</label>
+                      <div className="ui left icon input">
+                        <input type="password" /><i
+                          aria-hidden="true"
+                          className="lock icon"
+                        ></i>
+                      </div>
                     </div>
-                  </div>
-                  <button class="ui primary button">Login</button>
-                </form>
-                <div className="outer">
-                  <div className="middle">
-                    <div className="inner">
-                      <h2 className="ui teal image header cursor" onClick={this.handleClick.bind(this)}>
-                        <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt='' className="image cursor"></img>
-                        <div className="content cursor">
-                          Log-in with Google
-                        </div>
-                      </h2>
-                    </div>
-                  </div>
+                    <button className="ui primary button">Login</button>
+                  </form>
+                </div>
+                <div className="middle aligned column">
+                  <button className="ui big button">
+                    <i aria-hidden="true" className="signup icon"></i>Sign up
+                  </button>
+                </div>
               </div>
-              <div class="middle aligned column">
-                <button class="ui big button">
-                  <i aria-hidden="true" class="signup icon"></i>Sign up
-                </button>
+              <div className="ui vertical divider">Or</div>
+            </div>
+            <div className="middle">
+              <div className="inner">
+                <h2 className="ui teal image header cursor" onClick={this.handleClick.bind(this)}>
+                  <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt='' className="image cursor"></img>
+                  <div className="content cursor">
+                    Log-in with Google
+                  </div>
+                </h2>
               </div>
             </div>
-            <div class="ui vertical divider">Or</div>
-          </div>
           </div>
         )
       }

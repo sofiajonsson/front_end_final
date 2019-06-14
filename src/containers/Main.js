@@ -98,6 +98,28 @@ class Main extends Component {
 					}
 					return 0
 				}
+    setStateUsernameEmailToken = (data) => {
+      let user = {...this.state.user}
+      user.email = data.email
+      user.username = data.raw.names[0].displayName
+      user.token = localStorage.getItem('Final_Project_Token')
+      this.setState({user})
+    }
+
+    handleLogout = () => {
+      localStorage.removeItem('Final_Project_Token')
+      localStorage.removeItem('Final_Project_Email')
+      localStorage.removeItem('Final_Project_Username')
+      let user = {
+        email: '',
+        username: '',
+        token: ''
+      }
+      this.setState({user})
+    }
+
+
+
 
   render () {
     return (
@@ -121,10 +143,10 @@ class Main extends Component {
           />
           <Route path='/snowreports' render={() => <SnowReportList snowReport={this.state.snowReports} sortAscAlphabetically={this.sortAscAlphabetically} sortByOpen={this.sortByOpen} isAuthed={true} />}
           />
-          <Route path='/login' render={() => <Login  isAuthed={true} />}
+          <Route path='/login' render={() => <Login  isAuthed={true} setStateUsernameEmailToken={this.setStateUsernameEmailToken}  user={this.state.user} />}
           />
       </Switch>
-    
+
       </main>
     )
   }
