@@ -5,6 +5,7 @@ import ResortList from './ResortList'
 import ForecastList from './ForecastList'
 import SnowReportList from './SnowReportList'
 import Login from '../components/Login'
+import User from './User'
 
 
 const snow_API = "http://localhost:3000/snow_reports"
@@ -17,13 +18,14 @@ class Main extends Component {
     this.state={
       snowReports: [],
       forecastReports: [],
-      resorts: []
+      resorts: [],
+      user_favorite: [],
     }
 
     fetch(snow_API)
     .then(res => res.json())
-    .then(snowReports => this.setState({ snowReports }))
-    .then(console.log(this.state.snowReports))
+    .then(snowReports => this.setState({ snowReports }), () => console.log(this.state.snowReports))
+    // .then(console.log(this.state.snowReports))
     // console.log('hit snow api ')
     // console.log("Snow Report Fetch", this.state.snowReports)
 
@@ -118,6 +120,24 @@ class Main extends Component {
       this.setState({user})
     }
 
+    addResort = (resort) => {
+      console.log('here')
+        if(!this.state.user_favorite.find(favoritedResort => favoritedResort.id === resort.id)) {
+          console.log('hitting')
+          const newFavorite= [...this.state.user_favorite, resort]
+          this.setState({
+            user_favorite: newFavorite
+          },()=>console.log(this.state.user_favorite))
+        }
+      }
+
+    removeResort = (resort) => {
+      console.log("removing")
+      const newFavorite = this.state.user_favorite.filter(favoritedResort => favoritedResort.id !== resort.id)
+      this.setState({
+        user_favorite: newFavorite
+        })
+      }
 
 
 
@@ -131,19 +151,20 @@ class Main extends Component {
       Resorts Recieved: {this.state.resorts.length}
       <br/>
 
-      <div id="container">
-      </div>
+
 
 
       <Switch>
           <Route exact path='/' render={()=>  <Home/>}/>
-          <Route path='/resorts' render={() => <ResortList resorts={this.state.resorts} sortAscAlphabetically={this.sortAscAlphabetically} sortByPrice={this.sortByPrice} isAuthed={true} />}
+          <Route path='/resorts' render={() => <ResortList favoriteResort={this.addResort} resorts={this.state.resorts} sortAscAlphabetically={this.sortAscAlphabetically} sortByPrice={this.sortByPrice} isAuthed={true} />}
           />
           <Route path='/forecasts' render={() => <ForecastList forecast={this.state.forecastReports} sortAscAlphabetically={this.sortAscAlphabetically} sortByOpen={this.sortByOpen} isAuthed={true} />}
           />
           <Route path='/snowreports' render={() => <SnowReportList snowReport={this.state.snowReports} sortAscAlphabetically={this.sortAscAlphabetically} sortByOpen={this.sortByOpen} isAuthed={true} />}
           />
           <Route path='/login' render={() => <Login  isAuthed={true} setStateUsernameEmailToken={this.setStateUsernameEmailToken}  user={this.state.user} />}
+          />
+          <Route path='/user' render={() => <User userFavorite={this.user_favorite} removeFavorite={this.removeResort} isAuthed={true} user={this.state.user} />}
           />
       </Switch>
 

@@ -6,11 +6,8 @@ class SnowReportList extends Component{
 	constructor(props) {
 		super(props)
 		this.state={}
-		console.log("Snow Report", props)
+		// console.log("Snow Report", props)
 	 }
-	// <SearchBar
-	// 	sortAlphabetically={this.props.snowReport.sortAlphabetically}
-	// 	filtered={this.props.snowReport.filtered} />
 
 	render(){
 		console.log(this.props.snowReport)
