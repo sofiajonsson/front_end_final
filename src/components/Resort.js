@@ -6,32 +6,6 @@ class Resort extends Component{
 			this.state={}
 		}
 
-		// <tr>
-		// 	<td>
-		// 	</td>
-		// 	<td>
-		// 	Elevation:
-		// 	</td>
-		// 	<td>
-		// 	Skiiable Terrain:
-		// 	</td>
-		// 	<td>
-		// 	Beginner Runs:
-		// 	</td>
-		// 	<td>
-		// 	Intermediate Runs:
-		// 	</td>
-		// 	<td>
-		// 	Expert Runs:
-		// 	</td>
-		// 	<td>
-		// 	Total Lifts:
-		// 	</td>
-		// 	<td>
-		// 	Ticket Price:
-		// 	</td>
-		// 	</tr>
-
 	render() {
 		return(
 			<div>

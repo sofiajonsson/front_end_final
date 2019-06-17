@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import { Switch, Route } from 'react-router-dom'
 import Resort from '../components/Resort'
 import ResortSearchBar from '../components/ResortSearchBar'
-
+import Header from './Header'
 
 class ResortList extends Component{
 	constructor(props) {
@@ -17,6 +17,7 @@ class ResortList extends Component{
 	render(){
 		return(
 			<div>
+			<Header />
 			<ResortSearchBar
 				sortAlphabetically={this.props.sortAscAlphabetically}
 				sortByPrice={this.props.sortByPrice}

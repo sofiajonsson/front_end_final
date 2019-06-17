@@ -158,9 +158,9 @@ class MobileContainer extends Component {
           </Menu.Item>
 					<Menu.Item href='/resorts' as='a'>Resorts</Menu.Item>
 					<Menu.Item href='/forecasts' as='a'>Forecasts</Menu.Item>
-					<Menu.Item href='/snowreports' as='a'>Snow Report</Menu.Item>
+					<Menu.Item href='/snowreports'as='a'>Snow Report</Menu.Item>
           <Menu.Item href='/login' as='a'>Log in</Menu.Item>
-          <Menu.Item ref='/login' as='a'>Sign Up</Menu.Item>
+          <Menu.Item hfref='/login' as='a'>Sign Up</Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -215,7 +215,7 @@ const Home = () => (
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
-          <Grid.Column width={8}>
+          <Grid.Column width={8} style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
               We Help You keep Track of the best conditions
             </Header>
@@ -231,13 +231,13 @@ const Home = () => (
               bioengineered.
             </p>
           </Grid.Column>
-          <Grid.Column floated='right' width={6}>
+          <Grid.Column floated='right' width={8} >
             <Image bordered rounded size='large' src="https://i0.wp.com/www.powder.com/wp-content/uploads/2019/06/Jason-Killgore1.jpg?resize=1920%2C1080&ssl=1" />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button size='huge'>Check Them Out</Button>
+            <Button href='/resorts' size='huge'>Check Them Out</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>

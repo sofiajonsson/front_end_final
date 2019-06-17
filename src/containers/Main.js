@@ -144,14 +144,12 @@ class Main extends Component {
   render () {
     return (
       <main>
-      Snow Reports Recieved: {this.state.snowReports.length}
-      <br/>
-      Forecast Reports Recieved: {this.state.forecastReports.length}
-      <br/>
-      Resorts Recieved: {this.state.resorts.length}
-      <br/>
-
-
+        Snow Reports Recieved: {this.state.snowReports.length}
+        <br/>
+        Forecast Reports Recieved: {this.state.forecastReports.length}
+        <br/>
+        Resorts Recieved: {this.state.resorts.length}
+        <br/>
 
 
       <Switch>

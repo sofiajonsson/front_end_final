@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Forecast from '../components/Forecast'
 import ForecastSearchBar from '../components/ForecastSearchBar'
+import Header from './Header'
+
 class ForecastList extends Component{
 	constructor(props) {
 		super(props)
@@ -9,6 +11,7 @@ class ForecastList extends Component{
 	render(){
 		return(
 			<div>
+			<Header />
 			<ForecastSearchBar
 				sortAlphabetically={this.props.sortAscAlphabetically}
 			/>

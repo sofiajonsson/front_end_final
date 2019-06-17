@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Header from "../containers/Header";
 class SnowReport extends Component{
 	constructor(props){
 		super(props)
