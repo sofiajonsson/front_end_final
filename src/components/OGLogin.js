@@ -95,7 +95,6 @@ class Login extends React.Component {
                   <div className="content cursor">
                     Log-in with Google
                   </div>
-
                 </h2>
               </div>
             </div>
