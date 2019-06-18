@@ -6,23 +6,13 @@ import React from 'react'
 const Header = () => (
 
 
-<div className="ui secondary  menu">
+<div className="ui secondary  menu" float="center">
   <a className="active item" href='/'>
-    Home
+    <img src="https://image.flaticon.com/icons/png/512/51/51873.png" alt="home-icon" style={{width: 50, height: 50}}></img>
   </a>
-  <a className="item" href='/user'>
-    Favorites
+  <a className="active item" href='/user'>
+    <img src="https://previews.123rf.com/images/stas11/stas111803/stas11180300101/97139887-heart-icon-vector-illustration-linear-symbol-with-thin-outline-.jpg" alt="home-icon" style={{width: 50, height: 50}}></img>
   </a>
-  <div className="right menu">
-    <div className="item">
-    <a className="item" href='/login'>
-      Account
-    </a>
-    </div>
-    <a className="ui item">
-      Logout
-    </a>
-  </div>
 </div>
 )
 

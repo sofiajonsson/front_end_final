@@ -20,11 +20,12 @@ class SnowReportList extends Component{
 				sortByOpen={this.props.sortByOpen}
 			/>
 				<h1>Snow Reports List</h1>
+				<div className='ui centered three column grid' floated='right'>
 					{this.props.snowReport.map(snowReport => {
 						return <SnowReport key={snowReport.id} snowReport={snowReport}/>
 					})
 				}
-
+				</div>
 			</div>
 		)
 	}

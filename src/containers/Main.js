@@ -6,6 +6,7 @@ import ForecastList from './ForecastList'
 import SnowReportList from './SnowReportList'
 import Login from '../components/Login'
 import User from './User'
+import FaveResort from './FaveResort'
 
 
 const snow_API = "http://localhost:3000/snow_reports"
@@ -19,7 +20,7 @@ class Main extends Component {
       snowReports: [],
       forecastReports: [],
       resorts: [],
-      user_favorite: [],
+      fave_resorts: [],
     }
 
     fetch(snow_API)
@@ -122,20 +123,20 @@ class Main extends Component {
 
     addResort = (resort) => {
       console.log('here')
-        if(!this.state.user_favorite.find(favoritedResort => favoritedResort.id === resort.id)) {
+        if(!this.state.fave_resorts.find(favoritedResort => favoritedResort.id === resort.id)) {
           console.log('hitting')
-          const newFavorite= [...this.state.user_favorite, resort]
+          const newFavorite= [...this.state.fave_resorts, resort]
           this.setState({
-            user_favorite: newFavorite
-          },()=>console.log(this.state.user_favorite))
+            fave_resorts: newFavorite
+          },()=>console.log(this.state.fave_resorts))
         }
       }
 
     removeResort = (resort) => {
       console.log("removing")
-      const newFavorite = this.state.user_favorite.filter(favoritedResort => favoritedResort.id !== resort.id)
+      const newFavorite = this.state.fave_resorts.filter(favoritedResort => favoritedResort.id !== resort.id)
       this.setState({
-        user_favorite: newFavorite
+        fave_resorts: newFavorite
         })
       }
 
@@ -162,7 +163,7 @@ class Main extends Component {
           />
           <Route path='/login' render={() => <Login  isAuthed={true} setStateUsernameEmailToken={this.setStateUsernameEmailToken}  user={this.state.user} />}
           />
-          <Route path='/user' render={() => <User userFavorite={this.user_favorite} removeFavorite={this.removeResort} isAuthed={true} user={this.state.user} />}
+          <Route path='/user' render={() => <User userFavorite={this.state.fave_resorts} removeFavorite={this.removeResort} isAuthed={true} user={this.state.user} />}
           />
       </Switch>
 

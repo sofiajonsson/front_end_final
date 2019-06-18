@@ -24,10 +24,12 @@ class ResortList extends Component{
 			/>
 				<h1>Resorts List </h1>
 				<br/>
+						<div className='ui centered three column grid'>
 						{this.props.resorts.map(resort => {
-							return <Resort key={resort.id} resort={resort} />
+							return <Resort key={resort.id} resort={resort} handleStock={this.props.favoriteResort}/>
 						})
 					}
+			</div>
 			</div>
 		)
 	}
