@@ -35,6 +35,7 @@ const HomepageHeading = ({ mobile }) => (
       as='h1'
       content='Pow Tracker'
       inverted
+
       style={{
         fontSize: mobile ? '2em' : '4em',
         fontWeight: 'normal',
@@ -114,7 +115,8 @@ class DesktopContainer extends Component {
                 </Menu.Item>
               </Container>
             </Menu>
-            <HomepageHeading />
+
+            <HomepageHeading  />
           </Segment>
         </Visibility>
 
@@ -268,6 +270,7 @@ const Home = () => (
         <Header as='h3' style={{ fontSize: '2em' }}>
           Breaking The Grid, Grabs Your Attention
         </Header>
+        <img src="https://181ge72mb8rnbx7z1k119thi-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Tetons-BANG2-web-e1476286636877.jpg"></img>
         <p style={{ fontSize: '1.33em' }}>
           Instead of focusing on content creation and hard work, we have learned how to master the
           art of doing nothing by providing massive amounts of whitespace and generic content that
