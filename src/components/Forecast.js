@@ -7,8 +7,10 @@ class Forecast extends Component {
 		}
 	render(){
 		return(
-			<div>
-				<div className="card-body">
+		<div>
+			<div >
+				<a class="teal card">
+					<div className="card-body">
 					<h3 className="card-title">{this.props.forecast.title}</h3>
 					<table className="forecast-table">
 						<tbody>
@@ -119,7 +121,10 @@ class Forecast extends Component {
 						</tbody>
 					</table>
 				</div>
+			</a>
 			</div>
+			</div>
+
 		)
 	}
 }

@@ -16,9 +16,11 @@ class ForecastList extends Component{
 				sortAlphabetically={this.props.sortAscAlphabetically}
 			/>
 				<h1>Forecast List</h1>
+				<div className='ui centered three column grid' floated='right'>
 					{this.props.forecast.map(forecast => {
 						return <Forecast id={forecast.id} forecast={forecast} />
 					})}
+					</div>
 			</div>
 		)
 	}
