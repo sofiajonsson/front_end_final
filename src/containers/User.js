@@ -45,61 +45,63 @@ class User extends Component{
 		    <a>
 					<p style={{ fontSize: '1.33em' }}>
 					<i className="heart outline icon"></i>
+          <br />
 		       {this.props.favoriteResorts.length} Resorts
+           <br />
 		       {this.props.favoriteForecasts.length} Forecasts
+           <br />
 		       {this.props.favoriteSnowReports.length} Snow Reports
 					</p>
 		    </a>
 		  </div>
-			<Segment style={{ padding: '8em 0em' }} vertical>
+
 			<img src="http://nikolemitchell.com/wp-content/uploads/2018/02/favorites-text.png" alt="favorites"></img>
-	      <Grid container stackable verticalAlign='middle'>
-	        <Grid.Row>
-	          <Grid.Column width={4} style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-	            <h3 as='h3' style={{ fontSize: '2em' }}>
-	              RESORTS
-	            </h3>
-							<div>
-		           {this.props.favoriteResorts.map(resort => {
-                  return <Resort
+
+      <div className="ui horizontal segments">
+        <div className="ui segment">
+              <div className="topbar">
+                <h3 as='h3' style={{ fontSize: '2em' }}>
+  	              RESORTS
+  	            </h3>
+              </div>
+		                {this.props.favoriteResorts.map(resort => {
+                    return <Resort
                             key={resort.id}
                             resort={resort}
                             resortHandleClick={this.props.resortHandleClick} />
                 })}
 							</div>
-	          </Grid.Column>
-
-	          <Grid.Column floated='right' width={4} >
+        <div className="ui segment">
+          <div className="topbar">
 						<h3 as='h3' style={{ fontSize: '2em' }}>
 							FORECASTS
 						</h3>
-						<div>
-              {this.props.favoriteSnowReports.map(favoriteSnowReport => {
-                 return <SnowReport
+          </div>
+
+                  {this.props.favoriteSnowReports.map(favoriteSnowReport => {
+                    return <SnowReport
                            key={favoriteSnowReport.id}
                            snowReport={favoriteSnowReport}
                            snowReportHandleClick={this.props.snowReportHandleClick} />
                })}
 						</div>
-	          </Grid.Column>
-
-						<Grid.Column floated='right' width={4} >
+        <div className="ui segment">
+          <div className="topbar">
 						<h3 as='h3' style={{ fontSize: '2em' }}>
 							SNOW REPORTS
 						</h3>
-						<div>
-            {this.props.favoriteForecasts.map(favoriteForecast => {
-               return <Forecast
+            </div>
+              
+                {this.props.favoriteForecasts.map(favoriteForecast => {
+                  return <Forecast
                          key={favoriteForecast.id}
                          forecast={favoriteForecast}
                          forecastHandleClick={this.props.forecastHandleClick} />
              })}
+						       </div>
 						</div>
-	          </Grid.Column>
 
-	        </Grid.Row>
-	      </Grid>
-	    </Segment>
+
 	</div>
 
 		)

@@ -17,6 +17,7 @@ import './App.css';
 const snow_API = "http://localhost:3000/snow_reports"
 const forecast_API = "http://localhost:3000/weekly_forecasts"
 const resort_API = "http://localhost:3000/resorts"
+
 class App extends Component {
   constructor(props){
     super(props)
