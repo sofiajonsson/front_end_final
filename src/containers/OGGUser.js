@@ -22,38 +22,53 @@ class User extends Component{
 		return(
 		<div >
 		  <Header />
-  	  	<div className="ui segments">
-					<div className="ui horizontal segments">
-						<div className="ui segment">
-  	     			<img className="prof-pic" src="https://s22867.pcdn.co/wp-content/uploads/2013/11/Serria-QuitiQuit-5-1024x682.jpg" alt="user-pic" ></img>
-  	  			</div>
+			<div class="ui segments">
+			  <div class="ui horizontal segments">
+			    <div class="ui segment">
+			      <p>Top</p>
+			    </div>
 
-	      	 <div className="ui segment">
-	      	    <a className="header"></a>
-	      			   <h3 as='h3' style={{ fontSize: '4em' }}>Sofia</h3>
-			      	    <div className="meta">
-			      	      <p style={{ fontSize: '2em' }}>Member since 2019</p>
-			      	    </div>
-			      	    <div className="description">
-			      	      <p style={{ fontSize: '2.3em' }}>Home Country: <a>Sweden</a></p>
-			      	   	</div>
 
-									<p style={{ fontSize: '1.33em' }}>
-									<a><i className="heart outline icon">Favorites</i></a>
-				          <br />
-						       {this.props.favoriteResorts.length} Resorts
-				           <br />
-						       {this.props.favoriteForecasts.length} Forecasts
-				           <br />
-						       {this.props.favoriteSnowReports.length} Snow Reports
-									</p>
-			       </div>
-		      </div>
+			    <div class="ui segment">
+			      <p>Bottom</p>
+			    </div>
+			  </div>
 
-					<div className="ui segment">
-						<img src="http://nikolemitchell.com/wp-content/uploads/2018/02/favorites-text.png" alt="favorites" ></img>
-					 </div>
-				 </div>
+			  <div class="ui segment">
+			    <p>Bottom</p>
+			  </div>
+			</div>
+
+  	  	<div class="ui segments">
+					<div class="ui segment">
+  	     		<img className="prof-pic" src="https://s22867.pcdn.co/wp-content/uploads/2013/11/Serria-QuitiQuit-5-1024x682.jpg" alt="user-pic" ></img>
+  	  		</div>
+
+      	 <div class="ui segment">
+      	    <a className="header"></a>
+      			   <h3 as='h3' style={{ fontSize: '2em' }}>Sofia</h3>
+		      	    <div className="meta">
+		      	      <p style={{ fontSize: '1em' }}>Member since 2019</p>
+		      	    </div>
+		      	    <div className="description">
+		      	      <p style={{ fontSize: '1.33em' }}>Sweden</p>
+		      	   	</div>
+								<p style={{ fontSize: '1.33em' }}>
+								<a><i className="heart outline icon"></i></a>
+			          <br />
+					       {this.props.favoriteResorts.length} Resorts
+			           <br />
+					       {this.props.favoriteForecasts.length} Forecasts
+			           <br />
+					       {this.props.favoriteSnowReports.length} Snow Reports
+								</p>
+	       </div>
+	      </div>
+
+
+
+
+			<img src="http://nikolemitchell.com/wp-content/uploads/2018/02/favorites-text.png" alt="favorites" ></img>
 
       <div className="ui horizontal segments">
         <div className="ui segment">

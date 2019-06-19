@@ -1,4 +1,4 @@
-@import '~semantic-ui-css/semantic.css';
+
 .App {
   text-align: center;
 }
@@ -24,6 +24,9 @@
   color: #61dafb;
 }
 
+.ui segment {
+  border: none
+}
 body {
   margin: 0;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -35,6 +38,10 @@ body {
   width: 90em;
   height: 40em;
 }
+.prof-pic{
+  border-radius: 50%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
