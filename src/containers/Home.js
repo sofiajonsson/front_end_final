@@ -35,7 +35,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='Pow Tracker'
+      content='Snuh dude'
       inverted
 
       style={{

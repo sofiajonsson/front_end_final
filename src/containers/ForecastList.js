@@ -6,21 +6,44 @@ import Header from './Header'
 class ForecastList extends Component{
 	constructor(props) {
 		super(props)
-		this.state={}
+		this.state={
+			displayType: ''
+		}
 	}
+	renderReports =() => {
+		 if (this.state.displayType === ''){
+			 return(
+				 	<div>
+		 		{this.props.forecast.map(forecast => {
+					return <Forecast key={forecast.id} forecast={forecast} /> })}
+					</div>
+		 	)
+		} else if (this.state.displayType === "newSearch") {
+			return(
+				<div>
+			 		{ this.props.searchForecastResults.map(searchForecastResult => {
+			 		return <Forecast key={searchForecastResult.id} forecast={searchForecastResult}/> })}
+					</div>
+			 	)
+	 		}
+	 }
+	 setSearch =() =>{
+	 	this.setState({ displayType: "newSearch" })
+	 }
+
 	render(){
 		return(
 			<div>
 			<Header />
 			<ForecastSearchBar
 				sortAlphabetically={this.props.sortAscAlphabetically}
+				handleSearch={this.props.handleSearch}
+				setSearch={this.setSearch}
 			/>
 				<h1>Forecast List</h1>
 				<div className='ui centered three column grid' floated='right'>
-					{this.props.forecast.map(forecast => {
-						return <Forecast id={forecast.id} forecast={forecast} />
-					})}
-					</div>
+					{this.renderReports()}
+				</div>
 			</div>
 		)
 	}

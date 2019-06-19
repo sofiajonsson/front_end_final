@@ -25,7 +25,9 @@ class App extends Component {
       forecastReports: [],
       resorts: [],
       fave_resorts: [],
-      searchSnowResults: []
+      searchSnowResults: [],
+      searchForecastResults: [],
+      searchResortResults: []
     }
 
     fetch(snow_API)
@@ -148,8 +150,15 @@ class App extends Component {
     handleSearch = (searchString) => {
       console.log(searchString);
       const searchSnowResults = this.state.snowReports.filter(snowReport => snowReport.title.includes(searchString))
+      const searchForecastResults = this.state.forecastReports.filter(forecastReport => forecastReport.title.includes(searchString))
+      const searchResortResults = this.state.resorts.filter(resortReport => resortReport.title.includes(searchString))
       console.log(searchSnowResults);
-      this.setState({ searchSnowResults })
+      console.log(searchForecastResults);
+      console.log(searchResortResults);
+      this.setState({
+        searchSnowResults,
+        searchForecastResults,
+        searchResortResults })
     }
 
 
@@ -166,9 +175,9 @@ class App extends Component {
 
       <Switch>
           <Route exact path='/' render={()=>  <Home/>}/>
-          <Route path='/resorts' render={() => <ResortList favoriteResort={this.addResort} resorts={this.state.resorts} sortAscAlphabetically={this.sortAscAlphabetically} sortByPrice={this.sortByPrice} isAuthed={true} />}
+          <Route path='/resorts' render={() => <ResortList searchResortResults={this.state.searchResortResults} favoriteResort={this.addResort} resorts={this.state.resorts} handleSearch={this.handleSearch} sortAscAlphabetically={this.sortAscAlphabetically} sortByPrice={this.sortByPrice} isAuthed={true} />}
           />
-          <Route path='/forecasts' render={() => <ForecastList forecast={this.state.forecastReports} sortAscAlphabetically={this.sortAscAlphabetically} sortByOpen={this.sortByOpen} isAuthed={true} />}
+          <Route path='/forecasts' render={() => <ForecastList searchForecastResults={this.state.searchForecastResults} forecast={this.state.forecastReports} handleSearch={this.handleSearch} sortAscAlphabetically={this.sortAscAlphabetically} sortByOpen={this.sortByOpen} isAuthed={true} />}
           />
           <Route path='/snowreports' render={() => <SnowReportList searchSnowResults={this.state.searchSnowResults} snowReport={this.state.snowReports} handleSearch={this.handleSearch} sortAscAlphabetically={this.sortAscAlphabetically} sortByOpen={this.sortByOpen} isAuthed={true} />}
           />
