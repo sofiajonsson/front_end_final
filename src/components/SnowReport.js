@@ -8,8 +8,8 @@ class SnowReport extends Component{
 
 	render(){
 		return(
-			<div className="ui cards">
-				<a className="teal card">
+			<div className="ui cards" onClick={()=> this.props.snowReportHandleClick(this.props.snowReport)}>
+
 					<div className="card-body">
 						<h3 className="card-title">{this.props.snowReport.title}</h3>
 						<h5> Elevation: {this.props.snowReport.elevation}</h5>
@@ -21,7 +21,7 @@ class SnowReport extends Component{
 							<a href={this.props.snowReport.link}>More Details</a>
 						</h5>
  					</div>
-				</a>
+
 			</div>
 		)
 	}

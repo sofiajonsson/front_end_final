@@ -17,14 +17,21 @@ renderReports =() => {
 		 return(
 			 	<div>
 	 		{this.props.snowReport.map(snowReport => {
-				return <SnowReport key={snowReport.id} snowReport={snowReport} /> })}
+				return <SnowReport
+									key={snowReport.id}
+									snowReport={snowReport}
+									snowReportHandleClick={this.props.snowReportHandleClick} /> })}
 				</div>
 	 	)
 	} else if (this.state.displayType === "newSearch") {
 		return(
 			<div>
 		 		{ this.props.searchSnowResults.map(searchSnowResult => {
-		 		return <SnowReport key={searchSnowResult.id} snowReport={searchSnowResult}/> })}
+		 		return <SnowReport
+				 					key={searchSnowResult.id}
+									snowReport={searchSnowResult}
+									snowReportHandleClick={this.props.snowReportHandleClick}
+									/> })}
 				</div>
 		 	)
  		}
@@ -47,7 +54,7 @@ setSearch =() =>{
 			/>
 				<h1>Snow Reports List</h1>
 				<div className='ui centered three column grid' floated='right'>
-				{this.renderReports()}
+					{this.renderReports()}
 				</div>
 			</div>
 		)

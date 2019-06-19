@@ -24,7 +24,12 @@ class ResortList extends Component{
 			return(
 				<div>
 			 		{ this.props.searchResortResults.map(searchResortResult => {
-			 		return <Resort key={searchResortResult.id} resort={searchResortResult}/> })}
+			 		return <Resort
+									key={searchResortResult.id}
+									resort={searchResortResult}
+									handleClick={this.props.addResort}
+									/>
+								})}
 					</div>
 			 	)
 	 		}

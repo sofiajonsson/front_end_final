@@ -8,7 +8,7 @@ class Resort extends Component{
 
 	render() {
 		return(
-			<div>
+			<div onClick={()=> this.props.handleClick(this.props.resort)}>
 				<div className="card-body">
 					<h3 className="card-title">{this.props.resort.title}</h3>
 

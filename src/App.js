@@ -24,7 +24,9 @@ class App extends Component {
       snowReports: [],
       forecastReports: [],
       resorts: [],
-      fave_resorts: [],
+      favoriteResorts: [],
+      favoriteForecasts: [],
+      favoriteSnowReports: [],
       searchSnowResults: [],
       searchForecastResults: [],
       searchResortResults: []
@@ -109,6 +111,7 @@ class App extends Component {
 					}
 					return 0
 				}
+
     setStateUsernameEmailToken = (data) => {
       let user = {...this.state.user}
       user.email = data.email
@@ -130,23 +133,65 @@ class App extends Component {
     }
 
     addResort = (resort) => {
-      console.log('here')
-        if(!this.state.fave_resorts.find(favoritedResort => favoritedResort.id === resort.id)) {
-          console.log('hitting')
-          const newFavorite= [...this.state.fave_resorts, resort]
+        console.log("hit add resort")
+        if(!this.state.favoriteResorts.find(clicked => clicked.id === resort.id)){
+          console.log("Resort added to Favorites");
+          const newFavorite = [...this.state.favoriteResorts, resort]
           this.setState({
-            fave_resorts: newFavorite
-          },()=>console.log(this.state.fave_resorts))
+            favoriteResorts: newFavorite
+          }, ()=>console.log(this.state.favoriteResorts))
+        }
+      }
+    addForecast = (forecast) => {
+        console.log("hit add forecast")
+        if(!this.state.favoriteForecasts.find(clicked => clicked.id === forecast.id)){
+          console.log("Resort added to Favorites");
+          const newFavorite = [...this.state.favoriteForecasts, forecast]
+          this.setState({
+            favoriteForecasts: newFavorite
+          }, ()=>console.log(this.state.favoriteForecasts))
+        }
+      }
+    addSnowReport = (snowReport) => {
+      // debugger
+        console.log("hit add snowReport")
+        if(!this.state.favoriteSnowReports.find(clicked => clicked.id === snowReport.id)){
+          console.log("Resort added to Favorites");
+          const newFavorite = [...this.state.favoriteSnowReports, snowReport]
+          this.setState({
+            favoriteSnowReports: newFavorite
+          }, ()=>console.log(this.state.favoriteSnowReports))
         }
       }
 
     removeResort = (resort) => {
       console.log("removing")
-      const newFavorite = this.state.fave_resorts.filter(favoritedResort => favoritedResort.id !== resort.id)
+      let favoriteResortCopy = this.state.favoriteResorts.filter(fave => {
+        if (fave !== resort) return fave
+      })
       this.setState({
-        fave_resorts: newFavorite
+        favoriteResorts: favoriteResortCopy
         })
       }
+    removeForecast = (forecast) => {
+      console.log("removing")
+      let favoriteForecastCopy = this.state.favoriteForecasts.filter(fave => {
+        if (fave !== forecast) return fave
+      })
+      this.setState({
+        favoriteForecasts: favoriteForecastCopy
+        })
+      }
+    removeSnowReport = (snowReport) => {
+      console.log("removing")
+      let favoriteSnowReportCopy = this.state.favoriteSnowReports.filter(fave => {
+        if (fave !== snowReport) return fave
+      })
+      this.setState({
+        favoriteSnowReports: favoriteSnowReportCopy
+        })
+      }
+
     handleSearch = (searchString) => {
       console.log(searchString);
       const searchSnowResults = this.state.snowReports.filter(snowReport => snowReport.title.includes(searchString))
@@ -163,6 +208,8 @@ class App extends Component {
 
 
   render () {
+    console.log(this.state);
+    debugger
     return (
       <main>
         Snow Reports Recieved: {this.state.snowReports.length}
@@ -175,15 +222,50 @@ class App extends Component {
 
       <Switch>
           <Route exact path='/' render={()=>  <Home/>}/>
-          <Route path='/resorts' render={() => <ResortList searchResortResults={this.state.searchResortResults} favoriteResort={this.addResort} resorts={this.state.resorts} handleSearch={this.handleSearch} sortAscAlphabetically={this.sortAscAlphabetically} sortByPrice={this.sortByPrice} isAuthed={true} />}
+          <Route path='/resorts' render={() => <ResortList
+                                                  searchResortResults={this.state.searchResortResults}
+                                                  resorts={this.state.resorts}
+                                                  resortHandleClick={this.addResort}
+                                                  handleSearch={this.handleSearch}
+                                                  sortAscAlphabetically={this.sortAscAlphabetically}
+                                                  sortByPrice={this.sortByPrice}
+                                                  isAuthed={true}
+                                                  />}
           />
-          <Route path='/forecasts' render={() => <ForecastList searchForecastResults={this.state.searchForecastResults} forecast={this.state.forecastReports} handleSearch={this.handleSearch} sortAscAlphabetically={this.sortAscAlphabetically} sortByOpen={this.sortByOpen} isAuthed={true} />}
+          <Route path='/forecasts' render={() => <ForecastList
+                                                    searchForecastResults={this.state.searchForecastResults}
+                                                    forecast={this.state.forecastReports}
+                                                    handleSearch={this.handleSearch}
+                                                    sortAscAlphabetically={this.sortAscAlphabetically}
+                                                    sortByOpen={this.sortByOpen}
+                                                    isAuthed={true}
+                                                    />}
           />
-          <Route path='/snowreports' render={() => <SnowReportList searchSnowResults={this.state.searchSnowResults} snowReport={this.state.snowReports} handleSearch={this.handleSearch} sortAscAlphabetically={this.sortAscAlphabetically} sortByOpen={this.sortByOpen} isAuthed={true} />}
+          <Route path='/snowreports' render={() => <SnowReportList
+                                                      searchSnowResults={this.state.searchSnowResults}
+                                                      snowReport={this.state.snowReports}
+                                                      snowReportHandleClick={this.addSnowReport}
+                                                      handleSearch={this.handleSearch}
+                                                      sortAscAlphabetically={this.sortAscAlphabetically}
+                                                      sortByOpen={this.sortByOpen}
+                                                      isAuthed={true}
+                                                      />}
           />
-          <Route path='/login' render={() => <Login  isAuthed={true} setStateUsernameEmailToken={this.setStateUsernameEmailToken}  user={this.state.user} />}
+          <Route path='/login' render={() => <Login
+                                                isAuthed={true}
+                                                setStateUsernameEmailToken={this.setStateUsernameEmailToken}
+                                                user={this.state.user}
+                                                />}
           />
-          <Route path='/user' render={() => <User userFavorite={this.state.fave_resorts} removeFavorite={this.removeResort} isAuthed={true} user={this.state.user} />}
+          <Route path='/user' render={() => <User
+                                              favoriteResorts={this.state.favoriteResorts}
+                                              favoriteSnowReports={this.state.favoriteSnowReports}
+                                              favoriteSnowReports={this.state.favoriteSnowReports}
+                                              resortHandleClick={this.removeResort}
+                                              forecastHandleClick={this.removeForecast}
+                                              snowReportHandleClick={this.removeSnowReport}
+                                              isAuthed={true}
+                                              user={this.state.user} />}
           />
       </Switch>
 
