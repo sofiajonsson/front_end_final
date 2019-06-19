@@ -15,14 +15,21 @@ class ForecastList extends Component{
 			 return(
 				 	<div>
 		 		{this.props.forecast.map(forecast => {
-					return <Forecast key={forecast.id} forecast={forecast} /> })}
+					return <Forecast
+										key={forecast.id}
+										forecast={forecast}
+										forecastHandleClick={this.props.forecastHandleClick}
+										/> })}
 					</div>
 		 	)
 		} else if (this.state.displayType === "newSearch") {
 			return(
 				<div>
 			 		{ this.props.searchForecastResults.map(searchForecastResult => {
-			 		return <Forecast key={searchForecastResult.id} forecast={searchForecastResult}/> })}
+			 		return <Forecast
+										key={searchForecastResult.id}
+										forecast={searchForecastResult}
+										forecastHandleClick={this.props.forecastHandleClick}/> })}
 					</div>
 			 	)
 	 		}

@@ -17,7 +17,12 @@ class ResortList extends Component{
 			 return(
 				 	<div>
 		 		{this.props.resorts.map(resort => {
-					return <Resort key={resort.id} resort={resort} /> })}
+					return <Resort
+										key={resort.id}
+										resort={resort}
+										resortHandleClick={this.props.resortHandleClick}
+										 />
+									 })}
 					</div>
 		 	)
 		} else if (this.state.displayType === "newSearch") {
@@ -27,7 +32,7 @@ class ResortList extends Component{
 			 		return <Resort
 									key={searchResortResult.id}
 									resort={searchResortResult}
-									handleClick={this.props.addResort}
+									resortHandleClick={this.props.addResort}
 									/>
 								})}
 					</div>

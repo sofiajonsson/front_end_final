@@ -24,7 +24,7 @@ class User extends Component{
 }
 
 	render(){
-    debugger
+    
 		return(
 		<div >
 		  <Header />
@@ -45,7 +45,7 @@ class User extends Component{
 		    <a>
 					<p style={{ fontSize: '1.33em' }}>
 					<i className="heart outline icon"></i>
-		       NUMBER of favorite resorts
+		       {this.props.favoriteResorts.lengths}
 					</p>
 		    </a>
 		  </div>
@@ -62,7 +62,7 @@ class User extends Component{
                   return <Resort
                             key={resort.id}
                             resort={resort}
-                            handleClick={this.props.handleClick} />
+                            resortHandleClick={this.props.resortHandleClick} />
                 })}
 							</div>
 	          </Grid.Column>
@@ -72,7 +72,12 @@ class User extends Component{
 							FORECASTS
 						</h3>
 						<div className="card-body">
-
+              {this.props.favoriteSnowReports.map(favoriteSnowReport => {
+                 return <SnowReport
+                           key={favoriteSnowReport.id}
+                           snowReport={favoriteSnowReport}
+                           snowReportHandleClick={this.props.snowReportHandleClick} />
+               })}
 						</div>
 	          </Grid.Column>
 
@@ -81,11 +86,11 @@ class User extends Component{
 							SNOW REPORTS
 						</h3>
 						<div className="card-body">
-            {this.props.favoriteSnowReports.map(favoriteSnowReport => {
-               return <SnowReport
-                         key={favoriteSnowReport.id}
-                         snowReport={favoriteSnowReport}
-                         handleClick={this.props.handleClick} />
+            {this.props.favoriteForecasts.map(favoriteForecast => {
+               return <Forecast
+                         key={favoriteForecast.id}
+                         forecast={favoriteForecast}
+                         forecastHandleClick={this.props.forecastHandleClick} />
              })}
 						</div>
 	          </Grid.Column>

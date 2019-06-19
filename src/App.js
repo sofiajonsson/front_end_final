@@ -133,6 +133,7 @@ class App extends Component {
     }
 
     addResort = (resort) => {
+      // debugger
         console.log("hit add resort")
         if(!this.state.favoriteResorts.find(clicked => clicked.id === resort.id)){
           console.log("Resort added to Favorites");
@@ -143,6 +144,7 @@ class App extends Component {
         }
       }
     addForecast = (forecast) => {
+      //debugger
         console.log("hit add forecast")
         if(!this.state.favoriteForecasts.find(clicked => clicked.id === forecast.id)){
           console.log("Resort added to Favorites");
@@ -209,7 +211,6 @@ class App extends Component {
 
   render () {
     console.log(this.state);
-    debugger
     return (
       <main>
         Snow Reports Recieved: {this.state.snowReports.length}
@@ -235,6 +236,7 @@ class App extends Component {
           <Route path='/forecasts' render={() => <ForecastList
                                                     searchForecastResults={this.state.searchForecastResults}
                                                     forecast={this.state.forecastReports}
+                                                    forecastHandleClick={this.addForecast}
                                                     handleSearch={this.handleSearch}
                                                     sortAscAlphabetically={this.sortAscAlphabetically}
                                                     sortByOpen={this.sortByOpen}
@@ -259,7 +261,7 @@ class App extends Component {
           />
           <Route path='/user' render={() => <User
                                               favoriteResorts={this.state.favoriteResorts}
-                                              favoriteSnowReports={this.state.favoriteSnowReports}
+                                              favoriteForecasts={this.state.favoriteForecasts}
                                               favoriteSnowReports={this.state.favoriteSnowReports}
                                               resortHandleClick={this.removeResort}
                                               forecastHandleClick={this.removeForecast}
