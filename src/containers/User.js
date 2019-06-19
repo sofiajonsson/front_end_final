@@ -24,7 +24,7 @@ class User extends Component{
 }
 
 	render(){
-    
+
 		return(
 		<div >
 		  <Header />
@@ -45,7 +45,9 @@ class User extends Component{
 		    <a>
 					<p style={{ fontSize: '1.33em' }}>
 					<i className="heart outline icon"></i>
-		       {this.props.favoriteResorts.lengths}
+		       {this.props.favoriteResorts.length} Resorts
+		       {this.props.favoriteForecasts.length} Forecasts
+		       {this.props.favoriteSnowReports.length} Snow Reports
 					</p>
 		    </a>
 		  </div>
@@ -57,7 +59,7 @@ class User extends Component{
 	            <h3 as='h3' style={{ fontSize: '2em' }}>
 	              RESORTS
 	            </h3>
-							<div className="card-body">
+							<div>
 		           {this.props.favoriteResorts.map(resort => {
                   return <Resort
                             key={resort.id}
@@ -71,7 +73,7 @@ class User extends Component{
 						<h3 as='h3' style={{ fontSize: '2em' }}>
 							FORECASTS
 						</h3>
-						<div className="card-body">
+						<div>
               {this.props.favoriteSnowReports.map(favoriteSnowReport => {
                  return <SnowReport
                            key={favoriteSnowReport.id}
@@ -85,7 +87,7 @@ class User extends Component{
 						<h3 as='h3' style={{ fontSize: '2em' }}>
 							SNOW REPORTS
 						</h3>
-						<div className="card-body">
+						<div>
             {this.props.favoriteForecasts.map(favoriteForecast => {
                return <Forecast
                          key={favoriteForecast.id}
