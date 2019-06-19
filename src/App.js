@@ -30,19 +30,19 @@ class App extends Component {
 
     fetch(snow_API)
     .then(res => res.json())
-    .then(snowReports => this.setState({ snowReports }), () => console.log(this.state.snowReports))
+    .then(snowReports => this.setState({ snowReports }, () => console.log(this.state.snowReports)))
     // .then(console.log(this.state.snowReports))
     // console.log('hit snow api ')
     // console.log("Snow Report Fetch", this.state.snowReports)
 
     fetch(forecast_API)
     .then(res => res.json())
-    .then(forecastReports => this.setState({ forecastReports }), () => console.log(this.state.forecastReports))
+    .then(forecastReports => this.setState({ forecastReports }, () => console.log(this.state.forecastReports)))
     // console.log('hit forecast api')
 
     fetch(resort_API)
     .then(res => res.json())
-    .then(resorts => this.setState({ resorts }), () => console.log(this.state.resorts))
+    .then(resorts => this.setState({ resorts }, () => console.log(this.state.resorts)))
     // console.log('hit resort api ')
   }
 

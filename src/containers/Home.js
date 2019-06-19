@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
 import {
   Button,
   Container,
@@ -45,7 +47,8 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as='h2'
-      content='Keep up with your favorite resorts here'
+      content='Keep up with your favorite resorts'
+      image ='https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Freestyle_skiing_jump2.jpg/281px-Freestyle_skiing_jump2.jpg'
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
@@ -53,10 +56,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button primary size='huge'>
-      Get Tracking
-      <Icon name='right arrow' />
-    </Button>
+
   </Container>
 )
 
@@ -99,12 +99,18 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>
-                  Home
+                <Menu.Item as='span' active>
+                  <Link to="/">Home</Link>
                 </Menu.Item>
-                <Menu.Item href='/resorts' as='a'>Resorts</Menu.Item>
-                <Menu.Item href='/forecasts' as='a'>Forecasts</Menu.Item>
-                <Menu.Item href='/snowreports' as='a'>Snow Report</Menu.Item>
+                <Menu.Item as='span'>
+                  <Link to="/resorts">Resorts</Link>
+                </Menu.Item>
+                <Menu.Item as='span'>
+                  <Link to="/forecasts">Forecasts</Link>
+                </Menu.Item>
+                <Menu.Item as='span'>
+                  <Link to="/snowreports">Snow Report</Link>
+                </Menu.Item>
                 <Menu.Item position='right'>
                   <Button href='/login' as='a' inverted={!fixed}>
                     Log in
@@ -155,6 +161,7 @@ class MobileContainer extends Component {
           vertical
           visible={sidebarOpened}
         >
+          <Link to="/resorts">RRRRRRR</Link>
           <Menu.Item as='a' active>
             Home
           </Menu.Item>
