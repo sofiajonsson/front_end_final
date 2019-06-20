@@ -50,7 +50,7 @@ class User extends Component{
 			       </div>
 		      </div>
 
-					<div className="ui segment">
+					<div className="ui segment" position="center">
 						<img src="http://nikolemitchell.com/wp-content/uploads/2018/02/favorites-text.png" alt="favorites" ></img>
 					 </div>
 				 </div>

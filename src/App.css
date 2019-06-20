@@ -28,7 +28,7 @@
 .header-div {
   text-align: center;
   margin-right: auto;
-  display: flex;
+  display: inline-block;
   border-style: none
 }
 /* id is hashtag */
@@ -42,7 +42,8 @@
   display: flex;
 }
 .home-page-picture{
-  display: block;
+  display: inline-block;
+
 }
 body {
   margin: 0;
@@ -75,7 +76,7 @@ body {
   border: grey solid 1px;
   padding: 1rem;
   font-size: 16px;
-
+  border-style: none;
 
   display: inline-grid;
   margin: 1rem 2rem;
@@ -85,6 +86,7 @@ body {
   border: grey solid 1px;
   border-spacing: 0.5rem;
    border-collapse: collapse;
+   border-style: none;
 }
 td, th {
   padding: 0.5rem;
