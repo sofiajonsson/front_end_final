@@ -16,22 +16,18 @@ class ForecastSearchBar extends Component {
 
    render() {
      return (
-      <div>
-        <br/>
-        <strong>Sort by:</strong>
-        <label>
+       <div>
+         <div class="ui text menu">
+           <div class="header item">Sort</div>
+             <a class="active item" onChange={this.sortAlphabetically}>
+                Alphabetically
+            </a>
+            </div>
+          <form onSubmit={this.handleSubmit}>
+              <input type="text" name="q" ref={this.query} placeholder="Search..."/>
+              <button>Find</button>
+            </form>
           <br/>
-          <input type="radio" value="Alphabetically" checked={null} name="sortBy" onChange={this.sortAlphabetically} />
-          Alphabetically
-            <br/>
-        </label>
-
-        <form onSubmit={this.handleSubmit}>
-            <input type="text" name="q" ref={this.query} />
-            <button>Find</button>
-        </form>
-
-        <br/>
       </div>
     );
   }

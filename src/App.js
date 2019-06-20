@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Header from './containers/Header'
 import { Switch, Route } from 'react-router-dom'
 import Home from './containers/Home'
 import ResortList from './containers/ResortList'
@@ -209,19 +209,16 @@ class App extends Component {
         searchResortResults })
     }
 
-
+    // Snow Reports Recieved: {this.state.snowReports.length}
+    // <br/>
+    // Forecast Reports Recieved: {this.state.forecastReports.length}
+    // <br/>
+    // Resorts Recieved: {this.state.resorts.length}
+    // <br/>
   render () {
     console.log(this.state);
     return (
       <main>
-        Snow Reports Recieved: {this.state.snowReports.length}
-        <br/>
-        Forecast Reports Recieved: {this.state.forecastReports.length}
-        <br/>
-        Resorts Recieved: {this.state.resorts.length}
-        <br/>
-
-
       <Switch>
           <Route exact path='/' render={()=>  <Home/>}/>
           <Route path='/resorts' render={() => <ResortList

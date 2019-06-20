@@ -27,6 +27,15 @@
 .ui segment {
   border: none
 }
+.header-div {
+  display: block;
+  margin-left: 30%;
+}
+.navbar-icons{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 body {
   margin: 0;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;

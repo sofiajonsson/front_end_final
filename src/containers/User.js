@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Header from './Header'
 import Resort from '../components/Resort'
 import Forecast from '../components/Forecast'
 import SnowReport from '../components/SnowReport'
+import Header from './Header'
 
 
 const user_API = "http://localhost:3000/users"
@@ -21,7 +21,7 @@ class User extends Component{
 
 		return(
 		<div >
-		  <Header />
+		<Header />
   	  	<div className="ui segments">
 					<div className="ui horizontal segments">
 						<div className="ui segment">

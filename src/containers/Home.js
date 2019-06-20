@@ -28,11 +28,7 @@ class Home extends Component {
 				<h3> Cant wait to Ski?</h3>
 				<h4> Please Choose a Page to Browse North American Resorts</h4>
 
-				<div className="ui three item menu">
-					<button> <Link to="/resorts">Resorts</Link> </button>
-					<button><Link to="/forecasts">Forecasts</Link> </button>
-				<button><Link to="/snowreports">Snow Reports</Link> </button>
-				</div>
+			
 			</div>
 		)
 	}
