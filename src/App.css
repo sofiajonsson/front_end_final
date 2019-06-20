@@ -107,8 +107,21 @@ body {
 }
 .home-p-tag {
   font-size: 30px;
-  top: 50%;
-  left: 35%;
+  top: 38%;
+  left: 65%;
+  position: absolute;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 3em;
+  transform: translate(-50%, -50%);
+}
+#home-pg-button{
+  font-size: 20px;
+  font-size: 20px;
+  top: 42%;
+  left: 60%;
+  position: absolute;
+
 }
 
 .img-responsive {

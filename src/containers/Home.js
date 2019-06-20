@@ -17,14 +17,14 @@ class Home extends Component {
 
 		return(
 			<div id="home-image" style={ divStyle } >
-
-			 <br />
 			<br />
 			<br />
+			<br />
+			<h1 className='centered'>Pow Tracker</h1>
 			<br />
 			<br />
 			 <p className="home-p-tag">Keep up with your favorite resorts</p>
-			 <button position="center" class="ui button">Check Out Resorts </button>
+			 <button position="center" class="ui inverted button" id="home-pg-button"><Link to="/resorts">Check Out Resorts </Link></button>
 			<br />
 			<br />
 

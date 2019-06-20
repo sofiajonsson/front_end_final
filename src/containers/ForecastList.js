@@ -66,7 +66,7 @@ class ForecastList extends Component{
 								<Header>Added to Favorites!</Header>
 						</Segment>
 				</TransitionablePortal>
-					<h1>Forecast List</h1>
+					<h1 className="List-title">Forecast List</h1>
 					<div>
 						{this.renderReports()}
 					</div>

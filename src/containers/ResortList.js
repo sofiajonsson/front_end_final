@@ -71,7 +71,7 @@ class ResortList extends Component{
 								<Header>Added to favorites!</Header>
 						</Segment>
 				</TransitionablePortal>
-					<h1>Resorts List </h1>
+					<h1 className="List-title">Resorts List </h1>
 					<br/>
 					<div>
 					{this.renderReports()}
