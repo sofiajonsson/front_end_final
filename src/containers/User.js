@@ -19,13 +19,13 @@ class User extends Component{
 
 		return(
 		<div >
-  	  	<div className="ui segments">
-					<div className="ui horizontal segments">
-						<div className="ui segment">
+  	  	<div className="ui segments" id="user-top">
+					<div className="ui horizontal segments" id="user-mid">
+						<div className="ui segment" id="user-bottom">
   	     			<img className="prof-pic" src="https://s22867.pcdn.co/wp-content/uploads/2013/11/Serria-QuitiQuit-5-1024x682.jpg" alt="user-pic" ></img>
   	  			</div>
 
-	      	 <div className="ui segment">
+	      	 <div className="ui segment" id="user-bottom">
 	      	    <a className="header"></a>
 	      			   <h3 as='h3' style={{ fontSize: '4em' }}>Sofia</h3>
 			      	    <div className="meta">
@@ -47,13 +47,13 @@ class User extends Component{
 			       </div>
 		      </div>
 
-					<div className="ui segment" position="center">
+					<div className="ui segment" id="user-bottom" position="center">
 						<img src="http://nikolemitchell.com/wp-content/uploads/2018/02/favorites-text.png" alt="favorites" ></img>
 					 </div>
 				 </div>
 
-      <div className="ui horizontal segments">
-        <div className="ui segment">
+      <div className="ui horizontal segments" id="user-mid">>
+        <div className="ui segment" id="user-bottom">
               <div className="topbar">
                 <h3 as='h3' style={{ fontSize: '2em' }}>
   	              RESORTS
@@ -66,7 +66,7 @@ class User extends Component{
                             resortHandleClick={this.props.resortHandleClick} />
                 })}
 							</div>
-        <div className="ui segment">
+        <div className="ui segment" id="user-bottom">
           <div className="topbar">
 						<h3 as='h3' style={{ fontSize: '2em' }}>
 							FORECASTS
@@ -80,7 +80,7 @@ class User extends Component{
                            snowReportHandleClick={this.props.snowReportHandleClick} />
                })}
 						</div>
-        <div className="ui segment">
+        <div className="ui segment" id="user-bottom">
           <div className="topbar">
 						<h3 as='h3' style={{ fontSize: '2em' }}>
 							SNOW REPORTS

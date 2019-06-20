@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 // between routes.
 const Header = () => (
 <div className="header-div" border-color="white">
-<div className="ui secondary menu" float="center" >
+<div className="ui secondary menu" id="navbar-header" >
   <div className="ui labeled icon menu" id="header-plz-work" border-color="white">
       <div className="navbar-icons" border-color="white">
         <Link to="/">
@@ -37,7 +37,7 @@ const Header = () => (
       </div>
       <div className="navbar-icons">
         <Link to="/user">
-          <i><img src="https://cdn160.picsart.com/upscale-241297192008212.png?r1024x1024" alt="" style={{width: 50, height: 50}}></img></i>
+          <i><img src="https://icons-for-free.com/iconfiles/png/512/love+one+one+like+icon-1320184042027897906.png" alt="" style={{width: 50, height: 50}}></img></i>
           <br />
           Favorites
         </Link>

@@ -5,11 +5,15 @@ class Forecast extends Component {
 		super(props)
 			this.state={}
 		}
+		handleClick =()=> {
+			this.props.forecastHandleClick(this.props.forecast)
+			this.props.portal()
+		}
 	render(){
 		return(
 		<div>
-			<div >
-					<div className="card-body" onClick={()=> this.props.forecastHandleClick(this.props.forecast)}>
+			<div className="card-spacing">
+					<div className="card-body" onClick={()=> this.handleClick()}>
 					<h3 className="card-title">{this.props.forecast.title}</h3>
 					<table className="forecast-table">
 						<tbody>

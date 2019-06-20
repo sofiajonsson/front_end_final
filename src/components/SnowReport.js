@@ -5,10 +5,13 @@ class SnowReport extends Component{
 		super(props)
 			this.state={}
 	}
-
+	handleClick =()=> {
+		this.props.snowReportHandleClick(this.props.snowReport)
+		this.props.portal()
+	}
 	render(){
 		return(
-			<div className="ui cards" onClick={()=> this.props.snowReportHandleClick(this.props.snowReport)}>
+			<div className="card-spacing" onClick={()=> this.handleClick()}>
 
 					<div className="card-body">
 						<h3 className="card-title">{this.props.snowReport.title}</h3>

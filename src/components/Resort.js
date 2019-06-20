@@ -5,10 +5,13 @@ class Resort extends Component{
 		super(props)
 			this.state={}
 		}
-
+		handleClick =()=> {
+			this.props.resortHandleClick(this.props.resort)
+			this.props.portal()
+		}
 	render() {
 		return(
-			<div onClick={()=> this.props.resortHandleClick(this.props.resort)}>
+			<div className="card-spacing"  onClick={()=> this.handleClick()}>
 				<div className="card-body">
 					<h3 className="card-title">{this.props.resort.title}</h3>
 

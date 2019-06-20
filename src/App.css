@@ -24,8 +24,28 @@
   border-color: white;
   box-shadow: none;
   display: flex;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#navbar-header{
+  text-align: centered;
+}
+#user-top{
   border: none;
-  margin-left: 300px;
+  border-color: white;
+  box-shadow: none;
+}
+#user-mid{
+  border: none;
+  border-color: white;
+  box-shadow: none;
+  bottom: auto;
+}
+#user-bottom{
+  border: none;
+  border-color: white;
+  box-shadow: none;
 }
 
 .App-link {
@@ -53,7 +73,16 @@
 #home-image{
 margin-top: 20px;
 display: inline-block;
+width: “100%“;
+height: “1200px”;
+backgroundImage: url('https://181ge72mb8rnbx7z1k119thi-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Tetons-BANG2-web-e1476286636877.jpg');
+backgroundPosition: ‘center’;
+backgroundRepeat: ‘no-repeat’;
+backgroundSize: ‘cover’;
+}
 
+#search-box{
+    font-size: 20px;
 }
 body {
   margin: 0;
@@ -71,7 +100,7 @@ body {
   position: absolute;
   color: white;
   text-shadow: 2px 2px 4px #000000;
-  font-size: 10em;
+  font-size: 8em;
   top: 30%;
   left: 65%;
   transform: translate(-50%, -50%);
@@ -105,12 +134,23 @@ body {
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
-  font-size: 16px;
+  font-size: 20px;
   border-style: none;
+
 
   display: inline-grid;
   margin: 1rem 2rem;
   box-shadow: 3px 4px lightblue
+}
+
+.card-spacing {
+  display: inline-block;
+  margin: 50px;
+}
+.List-title{
+  font-size: 60px;
+  color: lightblue;
+  text-shadow: 2px 2px 4px #000000;
 }
 .forecast-table {
   border: grey solid 1px;

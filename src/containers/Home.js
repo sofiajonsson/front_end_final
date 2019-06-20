@@ -1,14 +1,23 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'
 
+
+var divStyle = {
+	width: '100%',
+ 	height: '1100px',
+ backgroundImage: `url('https://181ge72mb8rnbx7z1k119thi-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Tetons-BANG2-web-e1476286636877.jpg')`,
+ backgroundPosition: 'center',
+ backgroundRepeat: 'no-repeat',
+ backgroundSize: 'cover',
+	};
+
 class Home extends Component {
 
 	render() {
 
 		return(
-			<div id="home-image" >
-			<img src='https://181ge72mb8rnbx7z1k119thi-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Tetons-BANG2-web-e1476286636877.jpg'></img>
-			 <div className="centered">Snow Tracker
+			<div id="home-image" style={ divStyle } >
+
 			 <br />
 			<br />
 			<br />
@@ -22,7 +31,7 @@ class Home extends Component {
 			<br />
 			</div>
 
-		</div>
+
 
 		)
 	}

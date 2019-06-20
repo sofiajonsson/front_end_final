@@ -18,13 +18,9 @@ class ForecastSearchBar extends Component {
      return (
        <div>
          <div class="ui text menu">
-           <div class="header item">Sort</div>
-             <a class="active item" onChange={this.sortAlphabetically}>
-                Alphabetically
-            </a>
-            </div>
-          <form onSubmit={this.handleSubmit}>
-              <input type="text" name="q" ref={this.query} placeholder="Search..."/>
+          </div>
+          <form onSubmit={this.handleSubmit} id="search-box">
+              <input type="text" name="q" ref={this.query} placeholder="Search Forecasts..."/>
               <button>Find</button>
             </form>
           <br/>
