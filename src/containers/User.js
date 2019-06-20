@@ -29,14 +29,20 @@ class User extends Component{
 	      	    <a className="header"></a>
 	      			   <h3 as='h3' style={{ fontSize: '4em' }}>Sofia</h3>
 			      	    <div className="meta">
+									<br />
 			      	      <p style={{ fontSize: '2em' }}>Member since 2019</p>
 			      	    </div>
+									<br />
 			      	    <div className="description">
-			      	      <p style={{ fontSize: '2.3em' }}>Home Country: <a>Sweden</a></p>
+			      	      <p style={{ fontSize: '2.3em' }}>Home Country:
+											<a> Sweden</a>
+										</p>
 			      	   	</div>
-
+										<br />
 									<p style={{ fontSize: '1.33em' }}>
-									<a><i className="heart outline icon">Favorites</i></a>
+										<a>
+											<i className="heart outline icon">Favorites</i>
+										</a>
 				          <br />
 						       {this.props.favoriteResorts.length} Resorts
 				           <br />

@@ -46,6 +46,11 @@
   border: none;
   border-color: white;
   box-shadow: none;
+
+}
+/* inner div contains two but we want to grab the second, so therefore the 2nd nth div */
+#user-top > div > div:nth-child(2){
+  margin-top: 14vh;
 }
 
 .App-link {
@@ -121,7 +126,19 @@ body {
   top: 42%;
   left: 60%;
   position: absolute;
-
+}
+.inner{
+  position: absolute;
+  color: white;
+  font-size: 5em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#login-text {
+  font-size: 90px;
+  color: lightblue ;
+  text-shadow: 2px 2px 4px grey;
 }
 
 .img-responsive {
@@ -159,6 +176,7 @@ body {
 .card-spacing {
   display: inline-block;
   margin: 50px;
+  padding: 20px;
 }
 .List-title{
   font-size: 60px;
@@ -168,8 +186,8 @@ body {
 .forecast-table {
   border: grey solid 1px;
   border-spacing: 0.5rem;
-   border-collapse: collapse;
-   border-style: none;
+  border-collapse: collapse;
+  border-style: none;
 }
 td, th {
   padding: 0.5rem;
