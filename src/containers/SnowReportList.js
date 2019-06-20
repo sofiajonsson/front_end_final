@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SnowReport from "../components/SnowReport"
 import SnowReportSearchBar from '../components/SnowReportSearchBar'
-import Header from './Header'
 
 class SnowReportList extends Component{
 	constructor(props) {
@@ -45,7 +44,6 @@ setSearch =() =>{
 		console.log(this.props.snowReport)
 		return(
 			<div>
-			<Header />
 			<SnowReportSearchBar
 				sortAlphabetically={this.props.sortAscAlphabetically}
 				sortByOpen={this.props.sortByOpen}

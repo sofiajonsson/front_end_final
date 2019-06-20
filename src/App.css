@@ -19,30 +19,40 @@
   font-size: calc(12px + 2vmin);
   color: white;
 }
+#header-plz-work {
+  border: none;
+  border-color: white;
+  box-shadow: none;
+  display: flex;
+  border: none;
+  margin-left: 300px;
+}
 
 .App-link {
   color: #61dafb;
 }
 
 
-.header-div {
+.app-header-div {
   text-align: center;
   margin-right: auto;
-  display: inline-block;
+  /* display: inline-block; */
   border-style: none
 }
 /* id is hashtag */
 
 
 .navbar-icons{
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 20px;
 }
 .ui labeled icon menu{
   display: flex;
 }
-.home-page-picture{
-  display: inline-block;
+#home-image{
+margin-top: 20px;
+display: inline-block;
 
 }
 body {

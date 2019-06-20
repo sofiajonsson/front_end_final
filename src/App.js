@@ -218,58 +218,61 @@ class App extends Component {
   render () {
     console.log(this.state);
     return (
-      <main>
-      <Switch>
-          <Route exact path='/' render={()=>  <Home/>}/>
-          <Route path='/resorts' render={() => <ResortList
-                                                  searchResortResults={this.state.searchResortResults}
-                                                  resorts={this.state.resorts}
-                                                  resortHandleClick={this.addResort}
-                                                  handleSearch={this.handleSearch}
-                                                  sortAscAlphabetically={this.sortAscAlphabetically}
-                                                  sortByPrice={this.sortByPrice}
-                                                  isAuthed={true}
-                                                  />}
-          />
-          <Route path='/forecasts' render={() => <ForecastList
-                                                    searchForecastResults={this.state.searchForecastResults}
-                                                    forecast={this.state.forecastReports}
-                                                    forecastHandleClick={this.addForecast}
-                                                    handleSearch={this.handleSearch}
-                                                    sortAscAlphabetically={this.sortAscAlphabetically}
-                                                    sortByOpen={this.sortByOpen}
-                                                    isAuthed={true}
-                                                    />}
-          />
-          <Route path='/snowreports' render={() => <SnowReportList
-                                                      searchSnowResults={this.state.searchSnowResults}
-                                                      snowReport={this.state.snowReports}
-                                                      snowReportHandleClick={this.addSnowReport}
+        <div className="app-header-div">
+        <Header />
+        <div className="Main Content">
+          <Switch>
+              <Route exact path='/' render={()=>  <Home/>}/>
+              <Route path='/resorts' render={() => <ResortList
+                                                      searchResortResults={this.state.searchResortResults}
+                                                      resorts={this.state.resorts}
+                                                      resortHandleClick={this.addResort}
                                                       handleSearch={this.handleSearch}
                                                       sortAscAlphabetically={this.sortAscAlphabetically}
-                                                      sortByOpen={this.sortByOpen}
+                                                      sortByPrice={this.sortByPrice}
                                                       isAuthed={true}
                                                       />}
-          />
-          <Route path='/login' render={() => <Login
-                                                isAuthed={true}
-                                                setStateUsernameEmailToken={this.setStateUsernameEmailToken}
-                                                user={this.state.user}
-                                                />}
-          />
-          <Route path='/user' render={() => <User
-                                              favoriteResorts={this.state.favoriteResorts}
-                                              favoriteForecasts={this.state.favoriteForecasts}
-                                              favoriteSnowReports={this.state.favoriteSnowReports}
-                                              resortHandleClick={this.removeResort}
-                                              forecastHandleClick={this.removeForecast}
-                                              snowReportHandleClick={this.removeSnowReport}
-                                              isAuthed={true}
-                                              user={this.state.user} />}
-          />
-      </Switch>
-
-      </main>
+              />
+              <Route path='/forecasts' render={() => <ForecastList
+                                                        searchForecastResults={this.state.searchForecastResults}
+                                                        forecast={this.state.forecastReports}
+                                                        forecastHandleClick={this.addForecast}
+                                                        handleSearch={this.handleSearch}
+                                                        sortAscAlphabetically={this.sortAscAlphabetically}
+                                                        sortByOpen={this.sortByOpen}
+                                                        isAuthed={true}
+                                                        />}
+              />
+              <Route path='/snowreports' render={() => <SnowReportList
+                                                          searchSnowResults={this.state.searchSnowResults}
+                                                          snowReport={this.state.snowReports}
+                                                          snowReportHandleClick={this.addSnowReport}
+                                                          handleSearch={this.handleSearch}
+                                                          sortAscAlphabetically={this.sortAscAlphabetically}
+                                                          sortByOpen={this.sortByOpen}
+                                                          isAuthed={true}
+                                                          />}
+              />
+              <Route path='/login' render={() => <Login
+                                                    isAuthed={true}
+                                                    setStateUsernameEmailToken={this.setStateUsernameEmailToken}
+                                                    user={this.state.user}
+                                                    />}
+              />
+              <Route path='/user' render={() => <User
+                                                  favoriteResorts={this.state.favoriteResorts}
+                                                  favoriteForecasts={this.state.favoriteForecasts}
+                                                  favoriteSnowReports={this.state.favoriteSnowReports}
+                                                  resortHandleClick={this.removeResort}
+                                                  forecastHandleClick={this.removeForecast}
+                                                  snowReportHandleClick={this.removeSnowReport}
+                                                  isAuthed={true}
+                                                  user={this.state.user} />}
+              />
+          </Switch>
+          </div>
+        </div>
+    
     )
   }
 }

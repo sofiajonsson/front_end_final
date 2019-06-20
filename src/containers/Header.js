@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Header = () => (
 <div className="header-div" border-color="white">
 <div className="ui secondary menu" float="center" >
-  <div className="ui labeled icon menu" border-color="white">
+  <div className="ui labeled icon menu" id="header-plz-work" border-color="white">
       <div className="navbar-icons" border-color="white">
         <Link to="/">
         <img src="https://www.shareicon.net/download/2015/11/06/667813_sport_512x512.png" alt="home-icon" style={{width: 50, height: 50}}></img>

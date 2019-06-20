@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Forecast from '../components/Forecast'
 import ForecastSearchBar from '../components/ForecastSearchBar'
-import Header from './Header'
 
 class ForecastList extends Component{
 	constructor(props) {
@@ -41,16 +40,15 @@ class ForecastList extends Component{
 	render(){
 		return(
 			<div>
-			<Header />
-			<ForecastSearchBar
-				sortAlphabetically={this.props.sortAscAlphabetically}
-				handleSearch={this.props.handleSearch}
-				setSearch={this.setSearch}
-			/>
-				<h1>Forecast List</h1>
-				<div className='ui centered three column grid' floated='right'>
-					{this.renderReports()}
-				</div>
+				<ForecastSearchBar
+					sortAlphabetically={this.props.sortAscAlphabetically}
+					handleSearch={this.props.handleSearch}
+					setSearch={this.setSearch}
+				/>
+					<h1>Forecast List</h1>
+					<div className='ui centered three column grid' floated='right'>
+						{this.renderReports()}
+					</div>
 			</div>
 		)
 	}
