@@ -42,7 +42,7 @@ class ResortList extends Component{
 			 		return <Resort
 									key={searchResortResult.id}
 									resort={searchResortResult}
-									resortHandleClick={this.props.addResort}
+									resortHandleClick={this.props.resortHandleClick}
 									portal={this.portal}
 									/>
 								})}

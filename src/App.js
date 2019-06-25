@@ -134,7 +134,7 @@ class App extends Component {
     }
 
     addResort = (resort) => {
-      // debugger
+       // debugger
         console.log("hit add resort")
         if(!this.state.favoriteResorts.find(clicked => clicked.id === resort.id)){
           console.log("Resort added to Favorites");
@@ -272,7 +272,7 @@ class App extends Component {
           </Switch>
           </div>
         </div>
-    
+
     )
   }
 }

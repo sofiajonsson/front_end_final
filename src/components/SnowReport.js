@@ -11,7 +11,7 @@ class SnowReport extends Component{
 	}
 	render(){
 		return(
-			<div className="card-spacing" onClick={()=> this.handleClick()}>
+			<div onClick={()=> this.handleClick()}>
 
 					<div className="card-body">
 						<h3 className="card-title">{this.props.snowReport.title}</h3>

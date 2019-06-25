@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 var divStyle = {
 	width: '100%',
- 	height: '1100px',
+ 	height: '1000px',
  backgroundImage: `url('https://181ge72mb8rnbx7z1k119thi-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Tetons-BANG2-web-e1476286636877.jpg')`,
  backgroundPosition: 'center',
  backgroundRepeat: 'no-repeat',
