@@ -75,7 +75,7 @@ class User extends Component{
         <div className="ui segment" id="user-bottom">
           <div className="topbar">
 						<h3 as='h3' style={{ fontSize: '2em' }}>
-							FORECASTS
+							SNOW REPORTS
 						</h3>
           </div>
 
@@ -89,7 +89,7 @@ class User extends Component{
         <div className="ui segment" id="user-bottom">
           <div className="topbar">
 						<h3 as='h3' style={{ fontSize: '2em' }}>
-							SNOW REPORTS
+							FORECASTS
 						</h3>
             </div>
 
