@@ -1,68 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to Pow Tracker!
 
-## Available Scripts
 
-In the project directory, you can run:
+## What is Pow Tracker?
+This app was created for the avid skiier, or ski vacationer to check out North American stats for different ski resorts, their forecasts, and their snow reports. Imagine you are visiting Salt Lake City and want to make the most of your ski trip.. where do you go for the best conditions? You could use a couple of apps, or google your way through a couple of pages, OR you could use Pow Tracker! Pow Tracker pulls live data from the internet to provide the user with current stats on weather, snowfall, what kind of terrain a resort has, and how much each resort costs. As a visitor to the site you can access all these features, but as a user, you will be able to "favorite" a resort, forecast, and snow report and have those stats render on your personalized site. Currently, the application is only set up for one User to log in with their Google credentials, and I have created a mock profile to demonstrate this feature.
 
-### `npm start`
+## Configuration
+- First, visit repository for back_end_final and follow configuration instructions
+- Next, clone repository to your computer
+- Navigate to the parent folder, `front_end_final`
+- Run `bundle install`
+- Run `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Demo
+Please click on image to access YouTube video:
+[![Pow_Tracker_Application](lib/art/pow_tracker.png)](https://youtu.be/ZUXU7ZWpqD4)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Technologies Incorporated
 
-### `npm test`
+1. Ruby on Rails backend 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. JavaScript and React frontend 
 
-### `npm run build`
+3. API from scraped data off of:
+  https://www.skiresort.info/weather/north-america/
+  https://www.skiresort.info/snow-reports/north-america/
+  https://www.skiresort.info/ski-resorts/north-america/
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Database Diagram
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![alt text](lib/art/models_pow_tracker.png)
