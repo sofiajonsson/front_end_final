@@ -13,7 +13,7 @@ This app was created for the avid skiier, or ski vacationer to check out North A
 
 ## Demo
 Please click on image to access YouTube video:
-[![Pow_Tracker_Application](lib/art/pow_tracker.png)](https://youtu.be/ZUXU7ZWpqD4)
+[![Pow_Tracker_Application](pow_tracker_front_end.png)](https://youtu.be/ZUXU7ZWpqD4)
 
 ## Technologies Incorporated
 
@@ -25,7 +25,3 @@ Please click on image to access YouTube video:
   https://www.skiresort.info/weather/north-america/
   https://www.skiresort.info/snow-reports/north-america/
   https://www.skiresort.info/ski-resorts/north-america/
-
-## Database Diagram
-
-![alt text](lib/art/models_pow_tracker.png)
