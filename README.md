@@ -7,7 +7,7 @@ This app was created for the avid skiier, or ski vacationer to check out North A
 ## Configuration
 - First, visit repository for back_end_final and follow configuration instructions
 - Next, clone repository to your computer
-- Navigate to the parent folder, [`front_end_final`](
+- Navigate to the parent folder, [`back_end_final`](
 https://github.com/sofiajonsson/back_end_final)
 
 - Run `bundle install`
